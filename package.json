@@ -1,4 +1,8 @@
 {
+  "name": "hairday",
+  "description": "Web application to schedule haircuts",
+  "author": "Rocketseat",
+  "student": "Matheus Arakaki",
   "scripts": {
     "server": "json-server --watch server.json"
   },
