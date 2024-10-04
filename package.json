@@ -4,14 +4,16 @@
   "author": "Rocketseat",
   "student": "Matheus Arakaki",
   "scripts": {
+    "build": "webpack",
     "server": "json-server --watch server.json",
-    "build": "webpack"
+    "dev": "webpack server"
   },
   "dependencies": {
     "json-server": "^1.0.0-alpha.21"
   },
   "devDependencies": {
     "webpack": "^5.89.0",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }
