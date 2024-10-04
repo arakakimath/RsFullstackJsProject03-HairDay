@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "server": "json-server --watch server.json",
-    "dev": "webpack server"
+    "dev": "webpack serve"
   },
   "dependencies": {
     "dayjs": "^1.11.10",
