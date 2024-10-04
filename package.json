@@ -5,7 +5,7 @@
   "student": "Matheus Arakaki",
   "scripts": {
     "build": "webpack",
-    "server": "json-server --watch server.json",
+    "server": "json-server --watch server.json --port 3333",
     "dev": "webpack serve"
   },
   "dependencies": {
