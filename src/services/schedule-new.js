@@ -1,4 +1,5 @@
 import { apiConfig } from "./api-config";
+import { schedulesDay } from "../modules/schedules/load";
 
 export async function scheduleNew({ id, name, when }) {
   try {
@@ -13,6 +14,9 @@ export async function scheduleNew({ id, name, when }) {
       body: JSON.stringify({ id, name, when })
       }
     )
+
+    // Atualiza a página após agendamento
+    schedulesDay()
 
     // Exibe mensagem de agendamento realizado.
     alert("Agendamento realizado com sucesso!")
