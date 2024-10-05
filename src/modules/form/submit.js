@@ -48,6 +48,9 @@ form.onsubmit = async (event) => {
       name,
       when,
     })
+
+    // Limpa o campo de nome
+    clientName.value = ""
   } catch (error) {
     alert("Não foi possível realizar o agendamento.")
     console.log(error)
