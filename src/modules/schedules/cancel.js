@@ -1,10 +1,12 @@
+import { scheduleCancel } from "./schedule-cancel"
+import { schedulesDay } from "./load"
+
 const periods = document.querySelectorAll(".period")
-console.log(periods)
 
 // Gera evento click para cada lista (manhã, tarde, noite)
 periods.forEach((period) => {
   // Captura o evento de clique na lista.
-  period.addEventListener("click", (event) => {
+  period.addEventListener("click", async (event) => {
     if(event.target.classList.contains("cancel-icon")){
       // Obtém a li pai do elemento clicado.
       const item = event.target.closest("li")
@@ -15,9 +17,10 @@ periods.forEach((period) => {
           "Tem certeza que deseja cancelar o agendamento?"
         )
 
-        if(isConfirm)
-          console.log("Confirmado!")
-        
+        if(isConfirm){
+          await scheduleCancel({ id })
+          await schedulesDay()
+        }
       }
     }
   })
